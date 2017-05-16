@@ -1,0 +1,22 @@
+[Unit]
+Description=<%= class_name %>
+After=syslog.target network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/deploy/<%= application_name %>/current
+ExecStart=/bin/bash -lc 'rails runner -e production "<%= class_name %>.new.service"'
+User=<%= username %>
+Group=<%= username %>
+UMask=0002
+
+RestartSec=1
+Restart=on-failure
+
+StandardOutput=syslog
+StandardError=syslog
+
+SyslogIdentifier=<%= file_name %>
+
+[Install]
+WantedBy=multi-user.target
