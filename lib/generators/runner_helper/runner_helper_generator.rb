@@ -8,12 +8,6 @@ class RunnerHelperGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates', __FILE__)
   argument 'username', default: 'deploy'
 
-  def assert_runner_helper_presence
-    file = Rails.root.join('lib', 'runner_helper.rb')
-
-    raise "File not found: #{file}" unless File.exist?(file)
-  end
-
   def gen_runner_class
     template('runner_helper.rb.erb', "app/runners/#{file_name}_runner.rb")
   end
