@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-    $ rails g runner billing
+    $ rails g runner_helper billing
 
 creates `BillingRunner` class file `app/runners/billing_runner.rb` with systemd unit file `vendor/systemd/billing_runner.service`. Implement your business logic in `run_once` method.
 
