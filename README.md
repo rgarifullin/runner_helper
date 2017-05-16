@@ -22,7 +22,7 @@ Or install it yourself as:
 
     $ rails g runner billing
 
-creates `Billing` class file `app/runners/billing.rb` with systemd unit file `vendor/systemd/billing.service`. Implement your business logic in `run_once` method.
+creates `BillingRunner` class file `app/runners/billing_runner.rb` with systemd unit file `vendor/systemd/billing_runner.service`. Implement your business logic in `run_once` method.
 
 ## Contributing
 

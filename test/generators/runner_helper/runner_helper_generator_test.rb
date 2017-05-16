@@ -14,7 +14,7 @@ class RunnerHelperGeneratorTest < Rails::Generators::TestCase
 
   def setup
     TestApp::Application.initialize!
-    @name = 'lalala'
+    @name = 'cleaner'
     @test_path = 'test/generators/runner_helper/test_app'
     FileUtils.cp('lib/runner_helper.rb', "#{@test_path}/lib/")
   end
@@ -28,7 +28,7 @@ class RunnerHelperGeneratorTest < Rails::Generators::TestCase
   def test_it_does_something_useful
     run_generator [@name.capitalize]
 
-    assert_file "app/runners/#{@name}.rb"
-    assert_file "vendor/systemd/#{@name}.service"
+    assert_file "app/runners/#{@name}_runner.rb"
+    assert_file "vendor/systemd/#{@name}_runner.service"
   end
 end

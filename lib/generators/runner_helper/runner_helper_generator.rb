@@ -15,10 +15,10 @@ class RunnerHelperGenerator < Rails::Generators::NamedBase
   end
 
   def gen_runner_class
-    template('runner_helper.rb.erb', "app/runners/#{file_name}.rb")
+    template('runner_helper.rb.erb', "app/runners/#{file_name}_runner.rb")
   end
 
   def gen_unit_file
-    template('unit.service.erb', "vendor/systemd/#{file_name}.service")
+    template('unit.service.erb', "vendor/systemd/#{file_name}_runner.service")
   end
 end
