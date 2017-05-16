@@ -13,6 +13,6 @@ class RunnerHelperGenerator < Rails::Generators::NamedBase
   end
 
   def gen_unit_file
-    template('unit.service.erb', "vendor/systemd/#{file_name}_runner.service")
+    template('unit.service.erb', "vendor/systemd/#{file_name}.service")
   end
 end

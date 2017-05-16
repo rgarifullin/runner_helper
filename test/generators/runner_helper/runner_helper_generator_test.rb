@@ -29,6 +29,6 @@ class RunnerHelperGeneratorTest < Rails::Generators::TestCase
     run_generator [@name.capitalize]
 
     assert_file "app/runners/#{@name}_runner.rb"
-    assert_file "vendor/systemd/#{@name}_runner.service"
+    assert_file "vendor/systemd/#{@name}.service"
   end
 end
