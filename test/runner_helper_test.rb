@@ -5,6 +5,10 @@ class RunnerHelperTest < Minitest::Test
     include RunnerHelper
   end
 
+  def test_it_raises_not_implemented
+    assert_raises(NotImplementedError) { DummyClass.new.service }
+  end
+
   class SmartClass
     include RunnerHelper
 
@@ -15,10 +19,6 @@ class RunnerHelperTest < Minitest::Test
     def loop
       yield
     end
-  end
-
-  def test_it_catches_errors
-    assert DummyClass.new.service
   end
 
   def test_it_runs

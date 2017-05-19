@@ -10,7 +10,7 @@ module RunnerHelper
       run_once
       sleep TIMEOUT
     end
-  rescue Exception => ex
+  rescue => ex
     ExceptionNotifier.notify_exception(ex)
   end
 
