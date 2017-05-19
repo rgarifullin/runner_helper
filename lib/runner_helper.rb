@@ -8,7 +8,7 @@ module RunnerHelper
   def service
     loop do
       run_once
-      sleep TIMEOUT
+      sleep self.class::TIMEOUT
     end
   rescue => ex
     ExceptionNotifier.notify_exception(ex)
