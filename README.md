@@ -1,5 +1,8 @@
 # RunnerHelper
 
+[![Build Status](https://travis-ci.org/rgarifullin/runner_helper.svg?branch=master)](https://travis-ci.org/rgarifullin/runner_helper)
+[![Code Climate](https://codeclimate.com/github/rgarifullin/runner_helper/badges/gpa.svg)](https://codeclimate.com/github/rgarifullin/runner_helper)
+
 RunnerHelper launches [Rails runner](http://guides.rubyonrails.org/command_line.html#rails-runner) as [Systemd](https://www.freedesktop.org/wiki/Software/systemd/) service. This runner periodically runs code (every 5 seconds by default).
 
 ## Installation
