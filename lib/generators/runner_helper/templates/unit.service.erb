@@ -5,7 +5,7 @@ After=syslog.target network.target
 [Service]
 Type=simple
 WorkingDirectory=/home/deploy/<%= application_name %>/current
-ExecStart=/bin/bash -lc 'rails runner -e production "<%= class_name %>Runner.new.service"'
+ExecStart=/bin/bash -lc 'bundle exec rails runner -e production "<%= class_name %>Runner.new.service"'
 User=<%= username %>
 Group=<%= username %>
 UMask=0002
